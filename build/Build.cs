@@ -13,10 +13,18 @@ using Nuke.Common.CI.GitHubActions;
 [GitHubActions(
     "cd",
     GitHubActionsImage.UbuntuLatest,
-    InvokedTargets = new []{ nameof(IPublish.Publish) },
+    InvokedTargets = new []{ nameof(IPublish.Publish), nameof(ITagGitHub.PushTag) },
     EnableGitHubToken = true,
     OnPushBranches = new []{ MainBranch },
     OnPushTags = new []{ "prerelease-*" },
+    WritePermissions = new[]
+    {
+        GitHubActionsPermissions.Contents
+    },
+    ReadPermissions = new []
+    {
+        GitHubActionsPermissions.Packages,
+    },
     ImportSecrets = new []
     {
         nameof(IPublish.NuGetSource),
@@ -24,9 +32,12 @@ using Nuke.Common.CI.GitHubActions;
     },
     FetchDepth = 0
 )]
-class Build : NukeBuild, IPublish
+class Build : NukeBuild, IPublish, ITagGitHub
 {
     const string MainBranch = "main";
     
     public static int Main () => Execute<Build>(x => (x as ICompile).Compile);
+
+    public string TagAuthorEmail => "devops@scrambles.co.nz";
+    public string TagAuthorName => "Scrambles DevOps";
 }

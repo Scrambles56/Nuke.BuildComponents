@@ -23,6 +23,10 @@ on:
     tags:
       - 'prerelease-*'
 
+permissions:
+  contents: write
+  packages: read
+
 jobs:
   ubuntu-latest:
     name: ubuntu-latest
@@ -38,19 +42,19 @@ jobs:
             .nuke/temp
             ~/.nuget/packages
           key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj', '**/Directory.Packages.props') }}
-      - name: 'Run: Publish'
-        run: ./build.cmd Publish
+      - name: 'Run: Publish, PushTag'
+        run: ./build.cmd Publish PushTag
         env:
           NuGetSource: ${{ secrets.NUGET_SOURCE }}
           NuGetApiKey: ${{ secrets.NUGET_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: 'Publish: test-results'
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: artifacts/test-results
       - name: 'Publish: packages'
         uses: actions/upload-artifact@v3
         with:
           name: packages
           path: artifacts/packages
+      - name: 'Publish: test-results'
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: artifacts/test-results

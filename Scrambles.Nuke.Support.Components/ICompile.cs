@@ -79,5 +79,5 @@ public interface ICompile : IRestore
     IEnumerable<PublishConfiguration> PublishConfigurations
         => Array.Empty<PublishConfiguration>();
 
-    int PublishDegreeOfParallelism => 10;
+    int PublishDegreeOfParallelism => 1;
 }
