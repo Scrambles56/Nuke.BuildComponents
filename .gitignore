@@ -1,3 +1,6 @@
 ﻿[Bb]in/
 [Oo]bj/
 .nuke/temp/
+
+.idea/
+artifacts
