@@ -6,7 +6,7 @@ using System.ComponentModel;
 using JetBrains.Annotations;
 using Nuke.Common.Tooling;
 
-namespace Nuke.BuildComponents.Support;
+namespace Scrambles.Nuke.Support.Components.Support;
 
 [PublicAPI]
 [TypeConverter(typeof(TypeConverter<Configuration>))]

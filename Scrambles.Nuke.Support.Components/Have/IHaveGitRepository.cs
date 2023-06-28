@@ -6,7 +6,7 @@ using JetBrains.Annotations;
 using Nuke.Common;
 using Nuke.Common.Git;
 
-namespace Nuke.BuildComponents.Have;
+namespace Scrambles.Nuke.Support.Components.Have;
 
 [PublicAPI]
 public interface IHaveGitRepository : INukeBuild

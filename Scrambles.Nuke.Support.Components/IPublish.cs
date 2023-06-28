@@ -9,7 +9,7 @@ using Nuke.Common.Tooling;
 using Nuke.Common.Tools.DotNet;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 
-namespace Nuke.BuildComponents;
+namespace Scrambles.Nuke.Support.Components;
 
 [PublicAPI]
 public interface IPublish : IPack, ITest

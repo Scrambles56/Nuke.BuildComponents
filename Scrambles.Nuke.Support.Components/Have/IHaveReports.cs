@@ -5,7 +5,7 @@
 using JetBrains.Annotations;
 using Nuke.Common.IO;
 
-namespace Nuke.BuildComponents.Have;
+namespace Scrambles.Nuke.Support.Components.Have;
 
 [PublicAPI]
 public interface IHaveReports : IHaveArtifacts

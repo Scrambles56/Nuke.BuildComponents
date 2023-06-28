@@ -1,8 +1,8 @@
-﻿using Nuke.BuildComponents.Have;
-using Nuke.Common;
+﻿using Nuke.Common;
 using Nuke.Common.Tools.DotNet;
+using Scrambles.Nuke.Support.Components.Have;
 
-namespace Nuke.BuildComponents;
+namespace Scrambles.Nuke.Support.Components;
 
 public interface IClean : IHaveSolution, IHaveConfiguration
 {

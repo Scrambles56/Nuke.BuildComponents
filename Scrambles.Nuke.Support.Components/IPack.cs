@@ -3,15 +3,15 @@
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
 using JetBrains.Annotations;
-using Nuke.BuildComponents.Have;
 using Nuke.Common;
 using Nuke.Common.IO;
 using Nuke.Common.Tooling;
 using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Utilities.Collections;
+using Scrambles.Nuke.Support.Components.Have;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 
-namespace Nuke.BuildComponents;
+namespace Scrambles.Nuke.Support.Components;
 
 [PublicAPI]
 public interface IPack : ICompile, IHaveArtifacts

@@ -3,7 +3,6 @@
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
  using JetBrains.Annotations;
- using Nuke.BuildComponents.Have;
  using Nuke.Common;
  using Nuke.Common.CI.AzurePipelines;
  using Nuke.Common.CI.GitHubActions;
@@ -14,9 +13,10 @@
  using Nuke.Common.Tools.Coverlet;
  using Nuke.Common.Tools.DotNet;
  using Nuke.Common.Utilities.Collections;
+ using Scrambles.Nuke.Support.Components.Have;
  using static Nuke.Common.Tools.DotNet.DotNetTasks;
 
-namespace Nuke.BuildComponents;
+namespace Scrambles.Nuke.Support.Components;
 
 [PublicAPI]
 public interface ITest : ICompile, IHaveArtifacts

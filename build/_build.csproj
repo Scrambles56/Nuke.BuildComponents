@@ -14,7 +14,7 @@
   </ItemGroup>
 
 <ItemGroup>
-    <ProjectReference Include="..\Nuke.BuildComponents\Nuke.BuildComponents.csproj"/>
+    <ProjectReference Include="..\Scrambles.Nuke.Support.Components\Scrambles.Nuke.Support.Components.csproj"/>
 </ItemGroup>
 
 </Project>

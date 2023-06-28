@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-namespace Nuke.BuildComponents;
+namespace Scrambles.Nuke.Support.Components;
 
 public static class ToolSettingsExtensions
 {

@@ -3,7 +3,6 @@
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
 using JetBrains.Annotations;
-using Nuke.BuildComponents.Have;
 using Nuke.Common;
 using Nuke.Common.CI.AzurePipelines;
 using Nuke.Common.IO;
@@ -11,10 +10,11 @@ using Nuke.Common.Tooling;
 using Nuke.Common.Tools.Codecov;
 using Nuke.Common.Tools.ReportGenerator;
 using Nuke.Common.Utilities.Collections;
+using Scrambles.Nuke.Support.Components.Have;
 using static Nuke.Common.Tools.Codecov.CodecovTasks;
 using static Nuke.Common.Tools.ReportGenerator.ReportGeneratorTasks;
 
-namespace Nuke.BuildComponents;
+namespace Scrambles.Nuke.Support.Components;
 
 [PublicAPI]
 public interface IReportCoverage : ITest, IHaveReports, IHaveGitRepository

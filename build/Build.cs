@@ -1,4 +1,4 @@
-using Nuke.BuildComponents;
+using Scrambles.Nuke.Support.Components;
 using Nuke.Common;
 using Nuke.Common.CI.GitHubActions;
 
