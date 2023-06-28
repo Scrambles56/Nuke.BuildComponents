@@ -13,8 +13,8 @@
     <PackageReference Include="Nuke.Common" Version="7.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Nuke.BuildComponents\Nuke.BuildComponents.csproj" />
-  </ItemGroup>
+<ItemGroup>
+    <ProjectReference Include="..\Nuke.BuildComponents\Nuke.BuildComponents.csproj"/>
+</ItemGroup>
 
 </Project>
