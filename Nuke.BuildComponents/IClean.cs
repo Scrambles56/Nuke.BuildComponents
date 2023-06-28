@@ -1,4 +1,5 @@
-﻿using Nuke.Common;
+﻿using Nuke.BuildComponents.Have;
+using Nuke.Common;
 using Nuke.Common.Tools.DotNet;
 
 namespace Nuke.BuildComponents;

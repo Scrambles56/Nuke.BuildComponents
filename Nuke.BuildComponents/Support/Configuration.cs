@@ -1,6 +1,14 @@
+// Copyright 2023 Maintainers of NUKE.
+// Distributed under the MIT License.
+// https://github.com/nuke-build/nuke/blob/master/LICENSE
+
 using System.ComponentModel;
+using JetBrains.Annotations;
 using Nuke.Common.Tooling;
 
+namespace Nuke.BuildComponents.Support;
+
+[PublicAPI]
 [TypeConverter(typeof(TypeConverter<Configuration>))]
 public class Configuration : Enumeration
 {
