@@ -18,7 +18,7 @@ namespace Scrambles.Nuke.Support.Components;
 public record PublishConfiguration(Project Project, string Framework);
 
 [PublicAPI]
-public interface ICompile : IRestore
+public interface ICompile : IRestore, IHaveArtifacts
 {
     Target Compile => _ => _
         .DependsOn(Restore)
@@ -70,7 +70,8 @@ public interface ICompile : IRestore
     
     sealed Configure<DotNetPublishSettings, PublishConfiguration> PublishProjectSettingsBase => (_, p) => _
         .SetProject(p.Project)
-        .SetFramework(p.Framework);
+        .SetFramework(p.Framework)
+        .SetOutput(ArtifactsDirectory / "apps" / p.Project.Name / p.Framework);
 
     Configure<DotNetBuildSettings> CompileSettings => _ => _;
     Configure<DotNetPublishSettings> PublishSettings => _ => _;

@@ -34,7 +34,4 @@ public interface ITagGitHub : IPack, IHaveGitVersion, IHaveGitHubToken, IHaveGit
             
             Log.Information("Created tag {Tag} on {Repo}", reference.Ref, repo.FullName);
         });
-  
-    string TagAuthorEmail => "devops@example.com";
-    string TagAuthorName => "DevOps";
 }

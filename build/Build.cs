@@ -37,7 +37,4 @@ class Build : NukeBuild, IPublish, ITagGitHub
     const string MainBranch = "main";
     
     public static int Main () => Execute<Build>(x => (x as ICompile).Compile);
-
-    public string TagAuthorEmail => "devops@scrambles.co.nz";
-    public string TagAuthorName => "Scrambles DevOps";
 }
